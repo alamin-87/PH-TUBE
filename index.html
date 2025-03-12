@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH-TUBE</title>
+    <!-- -------------------daisy ui---------------------------------- -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- ------------------------------------------------------------ -->
+  </head>
+  <body>
+    <header>
+      <nav
+        class="w-11/12 mx-auto flex justify-between py-6 border-b-1 border-[#17171720]"
+      >
+        <div class="logo">
+          <img src="images/logo.png" alt="logo" />
+        </div>
+        <div class="sort">
+          <button class="btn">Sort by view</button>
+        </div>
+        <div class="blogs">
+          <button class="btn bg-[#FF1F3D] text-white">Blog</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="navbar justify-center flex">
+        <nav
+          id="category_container"
+          class="flex justify-center items-center gap-5"
+        >
+          <div>
+            <button class="btn btn-sm bg-[#FF1F3D] text-white">All</button>
+          </div>
+        </nav>
+      </div>
+      <section
+        id="videos_container"
+        class="grid grid-cols-4 gap-[10px] w-11/12 mx-auto"
+      >
+      </section>
+    </main>
+    <footer></footer>
+    <script src="script/index.js"></script>
+  </body>
+</html>
