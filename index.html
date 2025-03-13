@@ -12,6 +12,12 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- ------------------------------------------------------------ -->
+    <style>
+      .active {
+        background: #ff1f3d;
+        color: white;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -36,14 +42,31 @@
           class="flex justify-center items-center gap-5"
         >
           <div>
-            <button class="btn btn-sm bg-[#FF1F3D] text-white">All</button>
+            <button id="btn-all" onclick="loadVideos()" class="btn btn-sm">
+              All
+            </button>
           </div>
         </nav>
       </div>
       <section
         id="videos_container"
         class="grid grid-cols-4 gap-[10px] w-11/12 mx-auto"
-      >
+      ></section>
+      <!-- ----------------modal--------------- -->
+      <section>
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="video_details.showModal()">open modal</button> -->
+        <dialog id="video_details" class="modal">
+          <div class="modal-box">
+            <div id="modal_details"></div>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
       </section>
     </main>
     <footer></footer>
